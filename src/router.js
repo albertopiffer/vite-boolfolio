@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 import Home from './pages/Home.vue'
 import Portfolio from './pages/Portfolio.vue'
-// import Contacts from './pages/Contacts.vue'
+import About from './pages/About.vue'
 // import 404 from './pages/404.vue'
 
 const history = createWebHistory()
@@ -20,6 +20,11 @@ const router = createRouter({
             path: '/portfolio',
             name: 'portfolio',
             component: Portfolio,
+        },
+        {
+            path: '/about',
+            name: 'about',
+            component: About,
         },
         // 	path: '/404',
         // 	name: '404',

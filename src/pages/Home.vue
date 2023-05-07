@@ -3,7 +3,8 @@
         <div>
             <div class="container">
                 <h1>Home page</h1>
-                <a href="./portfolio" class="portfolio">portfolio</a>
+                <a href="./portfolio">portfolio</a>
+                <a href="./about">chi sono</a>
             </div>
         </div>
     </DefaultLayout>
@@ -19,8 +20,9 @@ export default {
 
 <style lang="scss" scoped>
 .container {
-    .portfolio {
-        margin-bottom: 50px;
-    }
+    display: flex;
+    flex-direction: column;
+
+    gap: 1rem;
 }
 </style>

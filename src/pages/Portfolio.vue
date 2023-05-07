@@ -1,5 +1,5 @@
 <template>
-    <main>
+    <DefaultLayout>
         <div>
 
             <ul class="cardsList">
@@ -7,7 +7,7 @@
             </ul>
 
         </div>
-    </main>
+    </DefaultLayout>
 </template>
 
 <script>
@@ -16,9 +16,12 @@ import axios from 'axios'
 import store from '../store'
 import Card from '../components/Card.vue'
 
+import DefaultLayout from '../layouts/Default.vue';
+
 export default {
     components: {
-        Card
+        Card,
+        DefaultLayout
     },
     data() {
         return {
@@ -48,4 +51,12 @@ export default {
 
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.cardsList {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    gap: 2rem;
+}
+</style>

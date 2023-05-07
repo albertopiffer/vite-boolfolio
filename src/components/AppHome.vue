@@ -31,7 +31,11 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+header {
+    margin-bottom: 50px;
+}
+
 .nav,
 .nav__menu {
     display: flex;
