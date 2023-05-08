@@ -6,7 +6,7 @@
         <span>url - {{ project.url }}</span>
         <span>client - {{ project.client }}</span>
 
-        <span>type - {{ project.type ? project.type.name : 'x' }}</span>
+        <span class="type">{{ project.type ? project.type.name : 'x' }}</span>
 
         <ul class="technology-list" v-if="project.technologies && project.technologies.length > 0">
             <li class="technology" v-for="technology in project.technologies" :key="technology.id">{{ technology.name }}
@@ -40,7 +40,21 @@ export default {
 li {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 1rem;
+
+    .type {
+        background-color: white;
+        padding: 5px;
+        border-radius: 999px;
+
+        width: fit-content;
+        min-width: 20px;
+
+        text-align: center;
+
+        color: #242424;
+    }
 
     .technology-list {
         display: flex;
