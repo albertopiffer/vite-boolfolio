@@ -8,15 +8,9 @@
                 <li>
                     <router-link :to="{ name: 'home' }">Home</router-link>
                 </li>
-                <!-- <li>
-                    <router-link :to="{ name: 'projects.index' }">Blog</router-link>
-                </li> -->
-                <!-- <li>
-                    <router-link :to="{ name: 'about' }">Chi siamo</router-link>
-                </li>
                 <li>
-                    <router-link to="/contacts">Contatti</router-link>
-                </li> -->
+                    <router-link :to="{ name: 'portfolio' }">Portfolio</router-link>
+                </li>
             </ul>
 
         </div>
@@ -25,9 +19,7 @@
 
 <script>
 export default {
-    mounted() {
-        console.log('nav bar mounted hook')
-    }
+
 }
 </script>
 

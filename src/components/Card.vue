@@ -1,6 +1,8 @@
 <template>
     <li class="element">
-        <h4>{{ project.title }}</h4>
+
+        <router-link :to="{ name: 'show', params: { slug: project.slug } }">{{ project.title }}</router-link>
+
         <span>id - {{ project.id }}</span>
         <span>{{ project.description }}</span>
         <span>url - {{ project.url }}</span>
@@ -14,7 +16,6 @@
         </ul>
 
         <span>created - {{ project.created_at }}</span>
-        <span>updated - {{ project.updated_at }}</span>
 
     </li>
 </template>

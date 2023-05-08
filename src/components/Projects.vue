@@ -24,45 +24,24 @@ export default {
     data() {
         return {
             projects: [],
-            lastPage: 0,
-            currentPage: 1,
-            links: []
         }
     },
     methods: {
         fetchProjects(page) {
-            // this.currentPage = page
+
             axios.get('http://127.0.0.1:8000/api/projects', {
-                params: {
-                    page: page
-                }
+
             })
                 .then(res => {
-                    // console.log(res)
+
                     const results = res.data.results
-                    this.links = results.links
-                    this.lastPage = results.last_page
                     this.projects = results.data
-                    this.currentPage = results.current_page
                 })
                 .catch(err => {
                     console.log(err)
                 })
         },
-        fetchProjectsByUrl(url) {
-            axios.get(url)
-                .then(res => {
-                    // console.log(res)
-                    const results = res.data.results
-                    this.links = results.links
-                    this.lastPage = results.last_page
-                    this.posts = results.data
-                    this.currentPage = results.current_page
-                })
-                .catch(err => {
-                    console.log(err)
-                })
-        }
+
     },
     mounted() {
         this.fetchProjects(this.currentPage)

@@ -2,7 +2,7 @@ import { reactive } from 'vue'
 
 const store = reactive({
     projects: [],
-    search: '',
+    project: null,
 })
 
 export default store
