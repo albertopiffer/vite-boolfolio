@@ -36,7 +36,7 @@ export default {
     props: ['slug'],
 
     methods: {
-        fetchProject(slug) {
+        fetchProject() {
             this.loading = true
             axios.get(`http://127.0.0.1:8000/api/projects/${this.slug}`)
                 .then(res => {
@@ -51,7 +51,9 @@ export default {
 
     created() {
         this.fetchProject()
+        console.log(`http://127.0.0.1:8000/api/projects/${this.slug}`)
         console.log(this.projectstore)
+        console.log(this.projectstore.title)
     },
 }
 

@@ -9,7 +9,6 @@ import ProjectsShow from './pages/Show.vue'
 // import 404 from './pages/404.vue'
 
 const history = createWebHistory()
-console.log('history: ', history)
 
 const router = createRouter({
     history,
