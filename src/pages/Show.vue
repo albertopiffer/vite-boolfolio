@@ -43,17 +43,16 @@ export default {
                     const { success, project } = res.data
                     if (success) {
                         this.projectstore = project
+                        console.log(this.projectstore)
+                        console.log(this.projectstore.title)
                     }
                 })
-
         }
     },
 
+
     created() {
         this.fetchProject()
-        console.log(`http://127.0.0.1:8000/api/projects/${this.slug}`)
-        console.log(this.projectstore)
-        console.log(this.projectstore.title)
     },
 }
 
